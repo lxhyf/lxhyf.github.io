@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 680px;
+				height: 1000px;
+				position: relative;
+				margin: 100px auto;
+				transform-style: preserve-3d;
+				animation: zhuanquan 6s infinite;
+			}
+			.box >div{
+				width: 680px;
+				height: 1000px;
+				border: 1px solid #333;
+				position:absolute;
+				opacity: 0.5;
+			}
+			.box > div:first-child{
+				transform: translateZ(500px);
+				background: url(../images/1.jpg) no-repeat;
+				background-position: 100% 100%;
+			}
+			.box > div:nth-child(2){
+				transform: rotateX(360deg) translateZ(500px);
+				background: url(../images/2.jpg) no-repeat;
+				background-position: 100% 100%;
+			}
+		
+			.box > div:nth-child(3){
+				transform: rotateX(90deg) translateZ(500px);
+				background: url(../images/3.jpg) no-repeat;
+				background-position: 100% 100%;
+			}
+			
+			.box > div:nth-child(4){
+				transform: rotateX(-90deg) translateZ(500px);
+				background: url(../images/4.jpg) no-repeat;
+				background-position: 100% 100%;
+			}
+		
+			.box > div:nth-child(5){
+				transform: rotateY(90deg) translateZ(500px);
+				background: url(../images/5.jpg) no-repeat;
+				background-position: 100% 100%;
+			}
+			
+			.box > div:nth-child(6){
+				transform: rotateY(-90deg) translateZ(500px);
+				background: url(../images/6.jpg) no-repeat;
+				background-position: 100% 100%;
+			}
+		
+			/*定义一个动画*/
+			@keyframes zhuanquan{
+				from{ transform: rotateX(30deg) rotateY(0deg);}
+				to{transform: rotateX(30deg) rotateY(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div>
+		<audio src="mofang/tt.mp3" c></audio>
+	</body>
+</html>
